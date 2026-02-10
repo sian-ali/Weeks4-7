@@ -1,8 +1,6 @@
-using UnityEditor.Tilemaps;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-public class HexagonSpinner : MonoBehaviour
+public class NewMonoBehaviourScript : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -12,10 +10,7 @@ public class HexagonSpinner : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
-        //if (
-        //{
-            
-        //}
+    { 
+        
     }
 }
