@@ -1,0 +1,36 @@
+using UnityEngine;
+using UnityEngine.InputSystem;
+
+public class Spawner : MonoBehaviour
+{
+    public GameObject runnerPrefab;
+    public Vector3 spawnPosition;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if(Mouse.current.leftButton.wasPressedThisFrame)
+        {
+            //spawn a runner
+            Instantiate(runnerPrefab);
+
+            //spawn a runner that is a child of this object
+            Instantiate(runnerPrefab, transform);
+
+            //spawn a runner at a specific position
+            Instantiate(runnerPrefab, spawnPosition, Quaternion.identity);
+
+            //POSITION OF ZERO:
+            //Vector3 zeroVector = Vector3.zero;
+
+            //ROTATION OF ZERO:
+            //Quaternion zeroRotation = Quaternion.identity;
+        }
+    }
+}
