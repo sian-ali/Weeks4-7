@@ -478,6 +478,7 @@ GameObject:
   - component: {fileID: 805827388}
   - component: {fileID: 805827390}
   - component: {fileID: 805827389}
+  - component: {fileID: 805827391}
   m_Layer: 5
   m_Name: character
   m_TagString: Untagged
@@ -542,6 +543,21 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 805827387}
   m_CullTransparentMesh: 1
+--- !u!114 &805827391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805827387}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d64b00b5a957464ca5bc63121586702, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Rotater
+  moveSpeed: 0
+  rotationSpeed: 200
+  speed: 8
 --- !u!1 &902262615
 GameObject:
   m_ObjectHideFlags: 0
@@ -1080,7 +1096,7 @@ Transform:
   m_GameObject: {fileID: 1321868506}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 149.15076, y: -57.400482, z: 0}
+  m_LocalPosition: {x: -920, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1518,19 +1534,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 2988398637371879118, guid: c0064c43550a79e44bd828ffb1455390, type: 3}
   m_PrefabInstance: {fileID: 3079855460528440294}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2050829222
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2050829221}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4bf53573917202a4096c8afcf60ce251, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Shooter
-  speed: 500
 --- !u!1001 &3079855460528440294
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1626,10 +1629,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 2988398637371879118, guid: c0064c43550a79e44bd828ffb1455390, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2050829222}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c0064c43550a79e44bd828ffb1455390, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
