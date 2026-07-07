@@ -16,6 +16,13 @@ public class Spawn : MonoBehaviour
     {
         if (Mouse.current.leftButton.wasPressedThisFrame)
         {
+            //spawn a runner
+            Instantiate(dodgeballPrefab);
+
+            //spawn a runner that is a child of this object
+            //Instantiate(dodgeballPrefab, transform);
+
+            //spawn a runner at a specific position
             Instantiate(dodgeballPrefab, spawnPosition, Quaternion.identity);
         }
     }

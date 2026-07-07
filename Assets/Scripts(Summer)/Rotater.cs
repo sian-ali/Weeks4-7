@@ -1,9 +1,8 @@
 using UnityEngine;
 
-
-public class Shooter : MonoBehaviour
+public class Rotater : MonoBehaviour
 {
-    public float speed;
+    public float speed = 1;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -13,6 +12,9 @@ public class Shooter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position += Vector3.right * speed * Time.deltaTime;
+        //if ()
+        Vector3 newRotation = transform.eulerAngles;
+        newRotation.z += speed * Time.deltaTime;
+        transform.eulerAngles = newRotation;
     }
 }
