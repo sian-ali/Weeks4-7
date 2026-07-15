@@ -14,16 +14,10 @@ public class Spawn : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Mouse.current.leftButton.wasPressedThisFrame)
+        if (Mouse.current.leftButton.wasPressedThisFrame == true)
         {
-            //spawn a runner
-            Instantiate(dodgeballPrefab);
-
-            //spawn a runner that is a child of this object
-            //Instantiate(dodgeballPrefab, transform);
-
-            //spawn a runner at a specific position
-            Instantiate(dodgeballPrefab, spawnPosition, Quaternion.identity);
+          
+            Instantiate(dodgeballPrefab, Random.insideUnitCircle * 3, Quaternion.identity);
         }
     }
 }

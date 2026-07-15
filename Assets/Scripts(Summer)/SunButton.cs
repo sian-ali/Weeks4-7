@@ -4,9 +4,14 @@ using TMPro;
 
 public class SunButton : MonoBehaviour
 {
-    public float speed;
-    public float xMax;
-    public float xMin;
+    public Vector3 startValue;
+    public Vector3 endValue;
+    public Vector3 currentValue;
+
+    public float duration;
+    float progress = 0f;
+
+    public AnimationCurve yPos;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,9 +25,9 @@ public class SunButton : MonoBehaviour
     }
     public void OnButtonPress(float theSun)
     {
-        Vector3 newPosition = transform.position;
-        newPosition.x += speed * Time.deltaTime;
-        transform.position = newPosition;
+        progress += Time.deltaTime;
+        currentValue = Vector3.Lerp(startValue, endValue, progress / duration);
+        transform.position = currentValue;
     }
 }
 
